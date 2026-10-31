@@ -1,0 +1,4 @@
+*.command text eol=lf
+*.cmd text eol=crlf
+data/*.csv -text
+archived_ratings/*.csv -text
