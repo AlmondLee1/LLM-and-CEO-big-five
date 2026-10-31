@@ -1,0 +1,30 @@
+[run]
+mode = "research"
+provider = "gpt"
+dimension = "extraversion"
+input = "../data/sp500_ceos.csv"
+input_encoding = "auto"
+output_dir = "../outputs"
+valid_scores_per_ceo = 100
+max_tokens = 1024
+timeout_seconds = 60
+request_delay_seconds = 1.0
+retry_delay_seconds = 1.0
+max_retry_delay_seconds = 60.0
+
+[providers.gpt]
+adapter = "openai_compatible"
+model = "gpt-4o"
+base_url = "https://api.openai.com/v1"
+api_key_env = "OPENAI_API_KEY"
+concurrency = 5
+temperature_mode = "omit"
+
+[providers.deepseek]
+adapter = "openai_compatible"
+model = "deepseek-flash"
+base_url = "https://api.deepseek.com"
+api_key_env = "DEEPSEEK_API_KEY"
+concurrency = 50
+temperature_mode = "omit"
+thinking_mode = "enabled"

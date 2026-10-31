@@ -1,0 +1,2 @@
+openai==2.8.1
+openpyxl==3.1.5
